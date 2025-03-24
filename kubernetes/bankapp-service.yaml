@@ -5,12 +5,13 @@ metadata:
   namespace: bankapp-namespace
   labels:
     app: bankapp
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"  # Optional: Use NLB for better performance
 spec:
-  type: NodePort
+  type: LoadBalancer  # Changed to LoadBalancer
   selector:
     app: bankapp-deploy
   ports:
-  - protocol: TCP
-    port: 8080
-    targetPort: 8080
-    nodePort: 30080
+    - protocol: TCP
+      port: 8080       # Expose on port 8080
+      targetPort: 8080  # Target the app's port
