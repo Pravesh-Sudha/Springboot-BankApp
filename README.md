@@ -1,7 +1,3 @@
-### 🛠️ **README.md for Spring Boot Bank Application on EKS with ArgoCD**
-
----
-
 # 🚀 **Spring Boot Bank Application - EKS Deployment with ArgoCD**
 
 Welcome to the **Spring Boot Bank Application**! This project demonstrates how to deploy a **Spring Boot-based Bank Application** with **MySQL** as the database on an **Amazon EKS cluster** using **ArgoCD** for continuous delivery.
