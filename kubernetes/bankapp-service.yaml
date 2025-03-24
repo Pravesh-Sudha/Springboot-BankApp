@@ -5,8 +5,7 @@ metadata:
   namespace: bankapp-namespace
   labels:
     app: bankapp
-  annotations:
-    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"  # Optional: Use NLB for better performance
+  
 spec:
   type: LoadBalancer  # Changed to LoadBalancer
   selector:
