@@ -7,10 +7,11 @@ metadata:
     app: bankapp
   
 spec:
-  type: LoadBalancer  # Changed to LoadBalancer
+  type: NodePort  # Changed to LoadBalancer
   selector:
     app: bankapp-deploy
   ports:
     - protocol: TCP
       port: 8080       # Expose on port 8080
-      targetPort: 8080  # Target the app's port
+      targetPort: 8080
+      nodePort: 30776 # Target the app's port
