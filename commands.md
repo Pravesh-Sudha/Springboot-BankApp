@@ -70,4 +70,4 @@ eksctl create nodegroup --cluster=bankapp \
 `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo`
 
 ## Delete Cluster
-`eksctl delete cluster --name=bankapp --region=us-west-1`
+`eksctl delete cluster --name=bankapp --region=us-east-1`
