@@ -66,5 +66,8 @@ eksctl create nodegroup --cluster=bankapp \
 ## Update KubeConfig
 `aws eks update-kubeconfig --region us-east-1 --name bankapp`
 
+## ARGOCD Password
+`kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo`
+
 ## Delete Cluster
 `eksctl delete cluster --name=bankapp --region=us-west-1`
